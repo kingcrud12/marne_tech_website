@@ -20,10 +20,10 @@ La police de caractère principale est **Inter**.
 
 ## Logo
 
-Le logo officiel de Marne Tech utilise une approche typographique "boxed" :
-- **Texte "MARNE"** : En gras, couleur sombre (`#1a3a41`).
-- **Texte "TECH"** : En blanc, contenu dans un rectangle aux coins légèrement arrondis avec le fond Teal (`#296B7E`).
-- Cette structure symbolise la solidité de l'agence associée à l'innovation technologique encadrée.
+Le logo officiel de Marne Tech est une signature typographique épurée :
+- **"MARNE"** : Typographie grasse (Inter 900) en gris anthracite (#303030).
+- **"TECH"** : Même typographie en bleu Teal (#296B7E).
+- Ce design mise sur la clarté et le professionnalisme, sans artifices superflus.
 
 ---
 *Identité créée en 2026 pour Marne Tech Paris.*
