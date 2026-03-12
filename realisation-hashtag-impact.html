@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashtag Impact | Marne Tech - Réalisation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-hero {
+            padding: 180px 5% 100px;
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('assets/images/project-hashtag-impact.png') center/cover;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .project-info-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            padding: 5rem 0;
+        }
+
+        .project-meta {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            height: fit-content;
+        }
+
+        .project-meta h4 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .project-meta ul {
+            list-style: none;
+        }
+
+        .project-meta li {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        .project-content h2 {
+            margin-bottom: 2rem;
+            color: var(--text-main);
+        }
+
+        .project-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--text-main);
+        }
+
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .project-gallery img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+        }
+
+        @media (max-width: 992px) {
+            .project-info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">MARNE<span>TECH</span></a>
+            <nav class="nav-links">
+                <a href="agence.html">L'agence</a>
+                <a href="expertise.html">Expertise</a>
+                <a href="realisations.html" style="color: var(--primary);">Réalisations</a>
+                <a href="index.html#contact" class="btn btn-primary">Nous contacter</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="project-hero">
+            <div class="container">
+                <p style="color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">
+                    Immobilier & Impact Social</p>
+                <h1 style="font-size: 3.5rem; margin-top: 1rem;">Hashtag Impact</h1>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="project-info-grid">
+                    <div class="project-content">
+                        <h2 class="reveal">Le Projet</h2>
+                        <p class="reveal">Hashtag Impact s'attaque au problème complexe de la vacance immobilière
+                            urbaine. Le projet visait à créer une plateforme de mise en relation entre propriétaires de
+                            bureaux inoccupés et porteurs de projets à vocation sociale (hébergement d'urgence, ateliers
+                            d'artistes, incubateurs solidaires).</p>
+
+                        <h2 class="reveal" style="margin-top: 4rem;">Notre Solution</h2>
+                        <p class="reveal">Nous avons développé une plateforme technologique facilitant la valorisation
+                            temporaire d'actifs immobiliers.
+                            <br><br>
+                            - Matching Intelligent : Algorithme permettant de trouver les espaces les plus adaptés
+                            aux besoins des projets sociaux.
+                            <br>
+                            - Suivi d'Impact : Module de reporting permettant de quantifier l'impact social et
+                            écologique généré par chaque occupation.
+                            <br>
+                            - Gestion Administrative : Automatisation des conventions d'occupation précaire pour
+                            sécuriser les deux parties.
+                        </p>
+
+                        <div class="project-gallery">
+                            <img src="assets/images/project-hashtag-impact.png" alt="Platform Screenshot"
+                                class="reveal">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070"
+                                alt="Urban Building" class="reveal">
+                        </div>
+                    </div>
+
+                    <aside class="project-meta reveal">
+                        <h4>Expertises</h4>
+                        <ul style="margin-bottom: 2rem;">
+                            <li>Développement Web (React/Next)</li>
+                            <li>Architecture Serverless</li>
+                            <li>Algorithme de Matching</li>
+                            <li>Design Système & Branding</li>
+                        </ul>
+
+                        <h4>Client</h4>
+                        <p style="margin-bottom: 2rem;">Hashtag Impact SAS</p>
+
+                        <a href="https://hashtag-impact.vercel.app/" class="btn btn-primary"
+                            style="width: 100%; text-align: center;" target="_blank">Découvrir la plateforme</a>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--bg-light); text-align: center;">
+            <div class="container reveal">
+                <h2>Projet Suivant</h2>
+                <div style="margin-top: 2rem;">
+                    <a href="realisation-promethee.html" class="btn btn-accent">Promethee Selenium</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo" style="color: var(--white);">MARNE<span>TECH</span></a>
+                <p>Votre partenaire technologique de proximité pour des solutions digitales innovantes et durables.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="expertise.html">Web Design</a></li>
+                    <li><a href="expertise.html">Développement</a></li>
+                    <li><a href="expertise.html">Data & IA</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>L'agence</h4>
+                <ul class="footer-links">
+                    <li><a href="agence.html">À propos</a></li>
+                    <li><a href="realisations.html">Portfolio</a></li>
+                    <li>Paris, France</li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Marne Tech. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

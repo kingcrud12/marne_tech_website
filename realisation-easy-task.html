@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Task | Marne Tech - Réalisation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-hero {
+            padding: 180px 5% 100px;
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('assets/images/project-easy-task.png') center/cover;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .project-info-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            padding: 5rem 0;
+        }
+
+        .project-meta {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            height: fit-content;
+        }
+
+        .project-meta h4 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .project-meta ul {
+            list-style: none;
+        }
+
+        .project-meta li {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        .project-content h2 {
+            margin-bottom: 2rem;
+            color: var(--text-main);
+        }
+
+        .project-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--text-main);
+        }
+
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .project-gallery img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+        }
+
+        @media (max-width: 992px) {
+            .project-info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">MARNE<span>TECH</span></a>
+            <nav class="nav-links">
+                <a href="agence.html">L'agence</a>
+                <a href="expertise.html">Expertise</a>
+                <a href="realisations.html" style="color: var(--primary);">Réalisations</a>
+                <a href="index.html#contact" class="btn btn-primary">Nous contacter</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="project-hero">
+            <div class="container">
+                <p style="color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">
+                    Productivité Mobile</p>
+                <h1 style="font-size: 3.5rem; margin-top: 1rem;">Easy Task</h1>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="project-info-grid">
+                    <div class="project-content">
+                        <h2 class="reveal">Le Projet</h2>
+                        <p class="reveal">Easy Task est né de la volonté de simplifier la gestion quotidienne des
+                            indépendants et des professionnels mobiles. L'objectif était de créer un assistant personnel
+                            "tout-en-un" regroupant les outils essentiels à la productivité sans la complexité des
+                            suites logicielles traditionnelles.</p>
+
+                        <h2 class="reveal" style="margin-top: 4rem;">Notre Solution</h2>
+                        <p class="reveal">Nous avons développé une application iOS intuitive intégrant nativement trois
+                            piliers fondamentaux :
+                            <br><br>
+                            1. <strong>Gestion de Facturation</strong> : Création de factures professionnelles en
+                            quelques clics via une interface épurée.
+                            <br>
+                            2. <strong>Synchronisation Agenda</strong> : Intégration complète avec Google Calendar pour
+                            une vue unifiée des échéances.
+                            <br>
+                            3. <strong>Logistique de Déplacement</strong> : Planification de trajets Uber directement
+                            depuis l'application pour optimiser les rendez-vous clients.
+                        </p>
+
+                        <div class="project-gallery"
+                            style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                            <img src="assets/images/IMG_2770.PNG" alt="Easy Task Dashboard" class="reveal">
+                            <img src="assets/images/IMG_2771.PNG" alt="Easy Task Invoices" class="reveal">
+                            <img src="assets/images/IMG_2767.PNG" alt="Easy Task Screen" class="reveal">
+                            <img src="assets/images/IMG_2768.PNG" alt="Easy Task Screen" class="reveal">
+                            <img src="assets/images/IMG_2769.PNG" alt="Easy Task Screen" class="reveal">
+                        </div>
+                    </div>
+
+                    <aside class="project-meta reveal">
+                        <h4>Expertises</h4>
+                        <ul style="margin-bottom: 2rem;">
+                            <li>Développement iOS (Swift)</li>
+                            <li>UI/UX Design Mobile</li>
+                            <li>Intégration API (Google, Uber)</li>
+                            <li>Architecture Cloud</li>
+                        </ul>
+
+                        <h4>Client</h4>
+                        <p style="margin-bottom: 2rem;">Lancement Propriétaire</p>
+
+                        <a href="https://apps.apple.com/us/app/easy-task/id6756175109" class="btn btn-primary"
+                            style="width: 100%; text-align: center;" target="_blank">Voir sur l'App Store</a>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--bg-light); text-align: center;">
+            <div class="container reveal">
+                <h2>Projet Suivant</h2>
+                <div style="margin-top: 2rem;">
+                    <a href="realisation-afro-beauty.html" class="btn btn-accent">Reconcil Afro Beauty</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo" style="color: var(--white);">MARNE<span>TECH</span></a>
+                <p>Votre partenaire technologique de proximité pour des solutions digitales innovantes et durables.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="expertise.html">Web Design</a></li>
+                    <li><a href="expertise.html">Développement</a></li>
+                    <li><a href="expertise.html">Data & IA</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>L'agence</h4>
+                <ul class="footer-links">
+                    <li><a href="agence.html">À propos</a></li>
+                    <li><a href="realisations.html">Portfolio</a></li>
+                    <li>Paris, France</li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Marne Tech. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
