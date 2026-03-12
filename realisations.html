@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Réalisations | Marne Tech - Portfolio Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .inner-hero {
+            padding: 160px 5% 100px;
+            background: var(--bg-light);
+            text-align: center;
+        }
+
+        .portfolio-grid-full {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0;
+        }
+
+        @media (max-width: 600px) {
+            .portfolio-grid-full {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">MARNE<span>TECH</span></a>
+            <nav class="nav-links">
+                <a href="agence.html">L'agence</a>
+                <a href="expertise.html">Expertise</a>
+                <a href="realisations.html" style="color: var(--primary);">Réalisations</a>
+                <a href="index.html#contact" class="btn btn-primary">Nous contacter</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="inner-hero">
+            <div class="container">
+                <h1 class="reveal" style="color: var(--text-main);">Nos Réalisations</h1>
+                <p class="reveal" style="max-width: 700px; margin: 0 auto;">Plongez dans nos derniers projets et
+                    découvrez l'étendue de notre savoir-faire technique.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="portfolio-grid-full">
+                    <div class="portfolio-item reveal">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426"
+                            alt="Project 1">
+                        <div class="portfolio-overlay">
+                            <h3>E-commerce Luxe</h3>
+                            <p>Développement Shopify & SEO</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item reveal">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2072"
+                            alt="Project 2">
+                        <div class="portfolio-overlay">
+                            <h3>Dashboard Logistique</h3>
+                            <p>Application métier & Data</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item reveal">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070"
+                            alt="Project 3">
+                        <div class="portfolio-overlay">
+                            <h3>Plateforme SaaS FinTech</h3>
+                            <p>Cloud Architecture & Sécurité</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item reveal">
+                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19255a7a?auto=format&fit=crop&q=80&w=2070"
+                            alt="Project 4">
+                        <div class="portfolio-overlay">
+                            <h3>Site Corporate Industriel</h3>
+                            <p>Web Design & Vidéo</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item reveal">
+                        <img src="https://images.unsplash.com/photo-1454165833767-02a698d5874c?auto=format&fit=crop&q=80&w=2070"
+                            alt="Project 5">
+                        <div class="portfolio-overlay">
+                            <h3>App de Livraison Locale</h3>
+                            <p>Mobile App & Géolocalisation</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item reveal">
+                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=2055"
+                            alt="Project 6">
+                        <div class="portfolio-overlay">
+                            <h3>Portail Immobilier IA</h3>
+                            <p>Matchmaking intelligent</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background-color: var(--primary); color: var(--white); text-align: center;">
+            <div class="container reveal">
+                <h2>Votre projet pourrait être le prochain</h2>
+                <p style="margin-bottom: 2rem; color: rgba(255,255,255,0.8);">Rejoignez nos clients satisfaits et
+                    propulsez votre activité.</p>
+                <a href="index.html#contact" class="btn btn-accent">Démarrer une collaboration</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo" style="color: var(--white);">MARNE<span>TECH</span></a>
+                <p>Votre partenaire technologique de proximité pour des solutions digitales innovantes et durables.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="expertise.html">Web Design</a></li>
+                    <li><a href="expertise.html">Développement</a></li>
+                    <li><a href="expertise.html">Data & IA</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>L'agence</h4>
+                <ul class="footer-links">
+                    <li><a href="agence.html">À propos</a></li>
+                    <li><a href="realisations.html">Portfolio</a></li>
+                    <li>Paris, France</li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Marne Tech. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

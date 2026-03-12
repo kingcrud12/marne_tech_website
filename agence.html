@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Agence | Marne Tech - Expertise & Proximité</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .inner-hero {
+            padding: 160px 5% 100px;
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">MARNE<span>TECH</span></a>
+            <nav class="nav-links">
+                <a href="agence.html" style="color: var(--primary);">L'agence</a>
+                <a href="expertise.html">Expertise</a>
+                <a href="realisations.html">Réalisations</a>
+                <a href="index.html#contact" class="btn btn-primary">Nous contacter</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="inner-hero">
+            <div class="container">
+                <h1 class="reveal">L'Agence</h1>
+                <p class="reveal" style="color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto;">Une équipe de
+                    passionnés basée à Paris, dédiée à la réussite de vos projets digitaux.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                    <div class="reveal">
+                        <h2>Notre Histoire</h2>
+                        <p>Née de la volonté d'associer expertise technologique de pointe et accompagnement de
+                            proximité, Marne Tech accompagne les entreprises d'Île-de-France dans leur transformation
+                            numérique.</p>
+                        <p style="margin-top: 1rem;">Nous croyons que la technologie ne doit pas être une barrière, mais
+                            un levier de croissance simple et efficace.</p>
+                    </div>
+                    <div class="reveal">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070"
+                            alt="Team work"
+                            style="width: 100%; border-radius: var(--border-radius); box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+
+                <div class="values-grid">
+                    <div class="value-card reveal">
+                        <div class="value-icon"><i data-lucide="users"></i></div>
+                        <h3>Proximité</h3>
+                        <p>Nous sommes à vos côtés à chaque étape, de Paris à toute l'Île-de-France.</p>
+                    </div>
+                    <div class="value-card reveal">
+                        <div class="value-icon"><i data-lucide="shield-check"></i></div>
+                        <h3>Qualité</h3>
+                        <p>Nous ne faisons aucun compromis sur la performance et la sécurité.</p>
+                    </div>
+                    <div class="value-card reveal">
+                        <div class="value-icon"><i data-lucide="lightbulb"></i></div>
+                        <h3>Innovation</h3>
+                        <p>Nous explorons sans cesse les technologies de demain.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo" style="color: var(--white);">MARNE<span>TECH</span></a>
+                <p>Votre partenaire technologique de proximité pour des solutions digitales innovantes et durables.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="expertise.html">Web Design</a></li>
+                    <li><a href="expertise.html">Développement</a></li>
+                    <li><a href="expertise.html">Data & IA</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>L'agence</h4>
+                <ul class="footer-links">
+                    <li><a href="agence.html">À propos</a></li>
+                    <li><a href="realisations.html">Portfolio</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Marne Tech. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
