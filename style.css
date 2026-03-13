@@ -150,6 +150,22 @@ header.scrolled {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 0.5rem;
+}
+
+header.scrolled .menu-toggle {
+    color: var(--text-main);
+}
+
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -486,6 +502,16 @@ footer {
 }
 
 /* Responsive adjustments */
+@media (max-width: 1200px) {
+    :root {
+        --section-padding: 80px 5%;
+    }
+
+    .footer-grid {
+        gap: 2rem;
+    }
+}
+
 @media (max-width: 992px) {
     .portfolio-grid {
         grid-template-columns: 1fr;
@@ -494,24 +520,82 @@ footer {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
     .nav-links {
-        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 400px;
+        height: 100vh;
+        background: var(--white);
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        padding: 2rem;
+        transition: var(--transition);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links .btn {
+        width: 100%;
+        justify-content: center;
     }
 
     .footer-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2.5rem;
     }
 
     .stats-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .section {
         padding: 60px 5%;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 15vw, 4.5rem);
+    }
+
+    .portfolio-grid-full {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero p {
+        font-size: 1.125rem;
+    }
+
+    .btn {
+        padding: 0.875rem 1.5rem;
+    }
+
+    .stat-item h2 {
+        font-size: 3.5rem;
     }
 }
 

@@ -38,3 +38,29 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Mobile Menu Toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        const icon = menuToggle.querySelector('i');
+        if (navLinks.classList.contains('active')) {
+            icon.setAttribute('data-lucide', 'x');
+        } else {
+            icon.setAttribute('data-lucide', 'menu');
+        }
+        lucide.createIcons();
+    });
+
+    // Close menu when clicking a link
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            menuToggle.querySelector('i').setAttribute('data-lucide', 'menu');
+            lucide.createIcons();
+        });
+    });
+}
