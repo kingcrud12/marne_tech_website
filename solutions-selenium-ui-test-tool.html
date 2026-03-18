@@ -8,6 +8,204 @@
     <meta name="description" content="Selenium UI Test Tool : une API de haut niveau conçue pour abstraire la complexité de Selenium WebDriver et simplifier vos tests web.">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .project-hero {
+            padding: 180px 5% 100px;
+            background: linear-gradient(rgba(13, 17, 23, 0.9), rgba(13, 17, 23, 0.9)), url('assets/images/selenium-ui-test-tool.png') center/cover;
+            background-color: #0d1117;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .project-info-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            padding: 5rem 0;
+        }
+
+        .project-meta {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            height: fit-content;
+            position: sticky;
+            top: 6rem;
+        }
+
+        .project-meta h4 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .project-meta ul {
+            list-style: none;
+        }
+
+        .project-meta li {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .project-meta li::before {
+            content: '→';
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .project-content h2 {
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .project-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.85;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 1.5rem 0 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            background: var(--bg-light);
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
+        .feature-list li .icon {
+            color: var(--primary);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .code-block {
+            background: #0d1117;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: #8b949e;
+            margin: 2rem 0;
+            border: 1px solid #30363d;
+            overflow-x: auto;
+        }
+
+        .code-block .comment { color: #6e7681; }
+        .code-block .keyword { color: #ff7b72; }
+        .code-block .class { color: #79c0ff; }
+        .code-block .string { color: #a5d6ff; }
+        .code-block .method { color: #d2a8ff; }
+
+        /* Dark preview panel */
+        .dark-preview {
+            background: #161b22;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            border: 1px solid #30363d;
+            margin: 2rem 0;
+        }
+
+        .dark-preview .nav-bar {
+            display: flex;
+            gap: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #30363d;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: #58a6ff;
+            font-weight: 500;
+        }
+
+        .dark-preview h3 {
+            color: #fff;
+            font-size: 1.8rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .dark-preview h3 span {
+            color: #3b82f6;
+        }
+
+        .dark-preview p {
+            color: #8b949e;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .dark-preview .cta-row {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .dark-preview .cta-primary {
+            background: #fff;
+            color: #0d1117;
+            padding: 0.6rem 1.4rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .dark-preview .cta-secondary {
+            background: #1f2937;
+            color: #fff;
+            padding: 0.6rem 1.4rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+
+        @media (max-width: 992px) {
+            .project-hero {
+                padding: 120px 5% 60px;
+            }
+            .project-info-grid {
+                grid-template-columns: 1fr;
+                padding: 3rem 0;
+            }
+            .project-meta {
+                position: static;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .code-block, .dark-preview {
+                padding: 1.25rem;
+                margin: 1.5rem 0;
+            }
+            .dark-preview h3 {
+                font-size: 1.5rem;
+            }
+            .dark-preview .nav-bar {
+                gap: 1rem;
+                overflow-x: auto;
+                white-space: nowrap;
+                padding-bottom: 0.5rem;
+            }
+            .feature-list li {
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
