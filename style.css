@@ -547,6 +547,47 @@ footer {
     z-index: 2;
 }
 
+/* ── Project Detail Layouts (solutions-*.html) ───────────── */
+.project-info-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+}
+
+.project-meta {
+    background: var(--bg-light);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    height: fit-content;
+    position: sticky;
+    top: 6rem;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+@media (max-width: 992px) {
+    .project-info-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .project-meta {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 /* ── Solutions List (solutions.html) ────────────────────── */
 .solutions-list {
     display: flex;
@@ -586,6 +627,111 @@ footer {
 .solution-info {
     padding: 3rem;
 }
+
+/* ── Project Detail Components ─────────────────────────── */
+.project-content h2 {
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+}
+
+.project-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.85;
+}
+
+.feature-list {
+    list-style: none;
+    margin: 1.5rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: var(--bg-light);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+.feature-list li .icon {
+    color: var(--primary);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.code-block {
+    background: #0d1117;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: #8b949e;
+    margin: 2rem 0;
+    border: 1px solid #30363d;
+    overflow-x: auto;
+}
+
+.code-block .comment { color: #6e7681; }
+.code-block .keyword { color: #ff7b72; }
+.code-block .class { color: #79c0ff; }
+.code-block .string { color: #a5d6ff; }
+.code-block .method { color: #d2a8ff; }
+
+/* Dark preview panel for Selenium UI Tool */
+.dark-preview {
+    background: #161b22;
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    border: 1px solid #30363d;
+    margin: 2rem 0;
+}
+
+.dark-preview .nav-bar {
+    display: flex;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #30363d;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #58a6ff;
+    font-weight: 500;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.dark-preview h3 {
+    color: #fff;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.dark-preview h3 span { color: #3b82f6; }
+
+.dark-preview p {
+    color: #8b949e;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.dark-preview .cta-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .code-block, .dark-preview {
+        padding: 1.25rem;
+        margin: 1.5rem 0;
+    }
+}
+
 
 @media (max-width: 1024px) {
     .solution-card {
