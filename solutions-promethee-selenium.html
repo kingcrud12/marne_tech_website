@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promethee Selenium | Marne Tech - Solution Open Source</title>
+    <meta name="description" content="Promethee Selenium : framework Python de haut niveau pour l'automatisation de tests UI robustes, maintenables et scalables.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .project-hero {
+            padding: 180px 5% 100px;
+            background: linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.82)), url('assets/images/project-promethee.png') center/cover;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .project-info-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            padding: 5rem 0;
+        }
+
+        .project-meta {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            height: fit-content;
+            position: sticky;
+            top: 6rem;
+        }
+
+        .project-meta h4 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .project-meta ul {
+            list-style: none;
+        }
+
+        .project-meta li {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .project-meta li::before {
+            content: '→';
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .project-content h2 {
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .project-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.85;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 1.5rem 0 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            background: var(--bg-light);
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
+        .feature-list li .icon {
+            color: var(--primary);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .code-block {
+            background: #0d1117;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: #8b949e;
+            margin: 2rem 0;
+            border: 1px solid #30363d;
+            overflow-x: auto;
+        }
+
+        .code-block .comment { color: #6e7681; }
+        .code-block .keyword { color: #ff7b72; }
+        .code-block .class { color: #79c0ff; }
+        .code-block .string { color: #a5d6ff; }
+        .code-block .method { color: #d2a8ff; }
+
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .project-gallery img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 992px) {
+            .project-info-grid {
+                grid-template-columns: 1fr;
+            }
+            .project-meta {
+                position: static;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .project-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">MARNE<span>TECH</span></a>
+            <nav class="nav-links">
+                <a href="agence.html">L'agence</a>
+                <a href="expertise.html">Expertise</a>
+                <a href="solutions.html" style="color: var(--primary);">Nos Solutions</a>
+                <a href="realisations.html">Réalisations</a>
+                <a href="index.html#contact" class="btn btn-primary">Nous contacter</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="project-hero">
+            <div class="container">
+                <p style="color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 1rem;">Open Source · QA Automation</p>
+                <h1 style="font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 1.5rem;">Promethee Selenium</h1>
+                <p style="color: rgba(255,255,255,0.8); max-width: 650px; margin: 0 auto; font-size: 1.2rem;">
+                    Un framework Python de haut niveau pour industrialiser vos tests UI Selenium.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="project-info-grid">
+                    <div class="project-content">
+                        <h2 class="reveal">Le Projet</h2>
+                        <p class="reveal">Promethee-Selenium est une initiative Open Source née d'un besoin interne de Marne Tech : industrialiser et stabiliser les tests de non-régression UI pour nos clients. Face aux limites des frameworks traditionnels, nous avons conçu une surcouche Python optimisée pour la maintenabilité et la rapidité de développement.</p>
+                        <p class="reveal">L'objectif : permettre à des équipes QA de tailles variées d'écrire des tests robustes sans se perdre dans les subtilités de Selenium WebDriver natif.</p>
+
+                        <h2 class="reveal" style="margin-top: 3rem;">Fonctionnalités clés</h2>
+                        <ul class="feature-list reveal">
+                            <li>
+                                <i data-lucide="layers" class="icon" style="width:20px;height:20px;"></i>
+                                <div><strong>Page Object Model strict</strong> — Séparation nette entre logique de test et sélecteurs UI.</div>
+                            </li>
+                            <li>
+                                <i data-lucide="terminal" class="icon" style="width:20px;height:20px;"></i>
+                                <div><strong>CLI de scaffolding</strong> — Génération instantanée de la structure d'un nouveau projet de test.</div>
+                            </li>
+                            <li>
+                                <i data-lucide="clock" class="icon" style="width:20px;height:20px;"></i>
+                                <div><strong>Gestion automatique des attentes</strong> — WebDriverWait abstrait, plus de <code>time.sleep()</code>.</div>
+                            </li>
+                            <li>
+                                <i data-lucide="camera" class="icon" style="width:20px;height:20px;"></i>
+                                <div><strong>Captures automatiques sur erreur</strong> — Screenshot et reporting détaillé à chaque échec.</div>
+                            </li>
+                            <li>
+                                <i data-lucide="git-merge" class="icon" style="width:20px;height:20px;"></i>
+                                <div><strong>Intégration CI/CD</strong> — Compatible GitHub Actions, GitLab CI, Jenkins.</div>
+                            </li>
+                        </ul>
+
+                        <h2 class="reveal" style="margin-top: 3rem;">Exemple d'utilisation</h2>
+                        <div class="code-block reveal">
+                            <div class="comment"># Sans Promethee (verbeux, fragile)</div>
+                            <div><span class="keyword">from</span> selenium.webdriver.support.ui <span class="keyword">import</span> WebDriverWait</div>
+                            <div><span class="keyword">from</span> selenium.webdriver.support <span class="keyword">import</span> expected_conditions as EC</div>
+                            <div>elem = WebDriverWait(driver, 10).until(EC.element_to_be_clickable(("id", "btn")))</div>
+                            <br>
+                            <div class="comment"># Avec Promethee (simple et lisible)</div>
+                            <div><span class="keyword">from</span> <span class="class">promethee</span> <span class="keyword">import</span> Page</div>
+                            <div>page = Page(driver)</div>
+                            <div>page.<span class="method">click</span>(<span class="string">"#btn"</span>)</div>
+                        </div>
+
+                        <div class="project-gallery">
+                            <img src="assets/images/project-promethee.png" alt="Promethee Selenium - Interface" class="reveal">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=2070" alt="Code qualité" class="reveal">
+                        </div>
+                    </div>
+
+                    <aside class="project-meta reveal">
+                        <h4>Stack technique</h4>
+                        <ul style="margin-bottom: 2rem;">
+                            <li>Python 3.8+</li>
+                            <li>Selenium WebDriver</li>
+                            <li>Page Object Model</li>
+                            <li>WebDriverWait</li>
+                            <li>pytest</li>
+                            <li>CI/CD Integration</li>
+                        </ul>
+
+                        <h4>Type</h4>
+                        <p style="margin-bottom: 2rem; font-size: 0.95rem;">Bibliothèque Open Source</p>
+
+                        <h4>Audience</h4>
+                        <p style="margin-bottom: 2rem; font-size: 0.95rem;">Équipes QA & développeurs Python</p>
+
+                        <a href="https://promethee-selenium.com/" class="btn btn-primary"
+                            style="width: 100%; justify-content: center; margin-bottom: 1rem;" target="_blank">
+                            <i data-lucide="book-open" style="width:16px;height:16px;"></i> Documentation
+                        </a>
+                        <a href="https://github.com/kingcrud12" class="btn btn-primary"
+                            style="width: 100%; justify-content: center; background: #161b22; border: 1px solid #30363d;" target="_blank">
+                            <i data-lucide="github" style="width:16px;height:16px;"></i> GitHub
+                        </a>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--primary); text-align: center; color: var(--white);">
+            <div class="container reveal">
+                <h2>Solution suivante</h2>
+                <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem;">Découvrez notre autre outil open source.</p>
+                <a href="solutions-selenium-ui-test-tool.html" class="btn btn-accent">Selenium UI Test Tool →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo" style="color: var(--white);">MARNE<span>TECH</span></a>
+                <p>Votre partenaire technologique de proximité pour des solutions digitales innovantes et durables.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Expertises</h4>
+                <ul class="footer-links">
+                    <li><a href="expertise.html">Automatisation</a></li>
+                    <li><a href="expertise.html">Développement Web</a></li>
+                    <li><a href="expertise.html">Applications Mobiles</a></li>
+                    <li><a href="expertise.html">Cloud &amp; DevOps</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>L'agence</h4>
+                <ul class="footer-links">
+                    <li><a href="agence.html">À propos</a></li>
+                    <li><a href="solutions.html">Nos Solutions</a></li>
+                    <li><a href="realisations.html">Réalisations</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Marne Tech. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

@@ -15,6 +15,7 @@
 
     /* Layout & Spacing */
     --section-padding: 100px 5%;
+    --section-padding-mobile: 60px 5%;
     --container-max-width: 1400px;
     --border-radius: 12px;
 
@@ -505,7 +506,151 @@ footer {
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* Responsive adjustments */
+/* Footer Section Responsive Adjustment */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+/* ── Centralized Page Headers (Previously inline) ────────── */
+.inner-hero {
+    padding: clamp(120px, 15vh, 180px) 5% clamp(60px, 10vh, 100px);
+    background: var(--primary-dark);
+    color: var(--white);
+    text-align: center;
+}
+
+.inner-hero h1 {
+    margin-bottom: 1.5rem;
+}
+
+.project-hero {
+    padding: clamp(120px, 15vh, 180px) 5% clamp(60px, 10vh, 100px);
+    background: var(--primary-dark);
+    text-align: center;
+    color: var(--white);
+    position: relative;
+}
+
+.project-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.85);
+    z-index: 1;
+}
+
+.project-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* ── Solutions List (solutions.html) ────────────────────── */
+.solutions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 2rem 0;
+}
+
+.solution-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: var(--transition);
+}
+
+.solution-card.reverse {
+    direction: rtl;
+}
+
+.solution-card.reverse>* {
+    direction: ltr;
+}
+
+.solution-preview {
+    position: relative;
+    height: 100%;
+    min-height: 350px;
+    background: var(--bg-light);
+}
+
+.solution-info {
+    padding: 3rem;
+}
+
+@media (max-width: 1024px) {
+    .solution-card {
+        gap: 0;
+    }
+
+    .solution-info {
+        padding: 2.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .solution-card,
+    .solution-card.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+    }
+
+    .solution-preview {
+        min-height: 280px;
+    }
+}
+
+/* ── Project Detail Layouts (solutions-*.html) ───────────── */
+.project-info-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+}
+
+.project-meta {
+    background: var(--bg-light);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    height: fit-content;
+    position: sticky;
+    top: 6rem;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+@media (max-width: 992px) {
+    .project-info-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .project-meta {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Global Responsive overrides ─────────────────────────── */
 @media (max-width: 1200px) {
     :root {
         --section-padding: 80px 5%;
@@ -575,12 +720,36 @@ footer {
         gap: 2rem;
     }
 
-    .section {
-        padding: 60px 5%;
+    .hero h1 {
+        font-size: clamp(2.5rem, 12vw, 4rem);
     }
 
-    .hero h1 {
-        font-size: clamp(3rem, 15vw, 4.5rem);
+    .section {
+        padding: var(--section-padding-mobile);
+    }
+
+    .inner-hero,
+    .project-hero {
+        padding: 120px 5% 60px;
+    }
+
+    .portfolio-grid {
+        gap: 1rem;
+    }
+
+    .sol-anim,
+    .portfolio-anim {
+        font-size: 0.7rem;
+    }
+
+    .phone-frame {
+        width: 80px;
+        height: 140px;
+    }
+
+    .woman-silhouette,
+    .house-structure {
+        transform: scale(0.8);
     }
 
     .portfolio-grid-full {
@@ -617,4 +786,419 @@ footer {
     width: 32px;
     height: 32px;
     stroke-width: 1.5px;
+}
+
+/* ── Solution Cards Animations ─────────────────────────────────── */
+.sol-anim {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.25rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(0.65rem, 1.2vw, 0.82rem);
+    overflow: hidden;
+}
+
+.sol-win-bar {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    padding-bottom: .75rem;
+    margin-bottom: .75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .07);
+    flex-shrink: 0;
+}
+
+.sol-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.sol-terminal {
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+    overflow: hidden;
+}
+
+/* Each line fades in from below with a stagger defined by --d */
+.sol-line {
+    color: #8b949e;
+    opacity: 0;
+    transform: translateY(8px);
+    animation: sol-fadein .35s ease forwards;
+    animation-delay: calc(var(--d) + .2s);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* After all lines shown, replay the whole sequence */
+.sol-anim-promethee .sol-line {
+    animation-name: sol-fadein;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+}
+
+.sol-anim-selenium .sol-line {
+    animation-name: sol-fadein;
+    animation-iteration-count: infinite;
+    animation-duration: 6.5s;
+}
+
+.sol-anim-promethee .sol-cursor {
+    animation-name: sol-blink;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+}
+
+.sol-anim-selenium .sol-cursor {
+    animation-name: sol-blink;
+    animation-iteration-count: infinite;
+    animation-duration: 6.5s;
+}
+
+.sol-kw {
+    color: #ff7b72;
+}
+
+.sol-cls {
+    color: #79c0ff;
+}
+
+.sol-fn {
+    color: #d2a8ff;
+}
+
+.sol-str {
+    color: #a5d6ff;
+}
+
+.sol-ok {
+    color: #8b949e;
+    font-weight: 700;
+}
+
+.sol-sep {
+    font-size: .75em;
+    letter-spacing: .03em;
+}
+
+/* Blinking cursor block */
+.sol-cursor {
+    width: 8px;
+    height: 1em;
+    background: #58a6ff;
+    display: inline-block;
+    opacity: 0;
+    margin-top: .2rem;
+    animation: sol-blink 1s step-end infinite;
+}
+
+@keyframes sol-fadein {
+    0% {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    8% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    88% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+}
+
+@keyframes sol-blink {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* ── Portfolio Items Animations ────────────────────────────────── */
+
+/* Common Portfolio Anim Container */
+.portfolio-anim {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--primary-dark);
+}
+
+/* 1. Easy Task - Smartphone Assistant */
+.anim-easy-task {
+    background: linear-gradient(135deg, #1e3a8a, #4338ca);
+}
+
+.phone-frame {
+    width: 100px;
+    height: 180px;
+    background: #0f172a;
+    border: 3px solid #334155;
+    border-radius: 18px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.phone-screen {
+    position: absolute;
+    inset: 6px;
+    background: #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 8px;
+    gap: 6px;
+}
+
+.assistant-orb {
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, #60a5fa, #2563eb);
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    box-shadow: 0 0 15px #60a5fa;
+    animation: floating 3s ease-in-out infinite;
+}
+
+.task-line {
+    height: 4px;
+    background: #475569;
+    border-radius: 2px;
+    width: 0;
+    animation: taskSlide 4s infinite;
+}
+
+.task-line:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.task-line:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.task-line:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+        filter: brightness(1);
+    }
+
+    50% {
+        transform: translateY(-8px) scale(1.1);
+        filter: brightness(1.3);
+    }
+}
+
+@keyframes taskSlide {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+
+    20% {
+        width: 80%;
+        opacity: 1;
+    }
+
+    80% {
+        width: 80%;
+        opacity: 1;
+    }
+
+    100% {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+/* 2. Afro Beauty - Styled Woman */
+.anim-afro-beauty {
+    background: linear-gradient(135deg, #451a03, #78350f);
+}
+
+.woman-silhouette {
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+
+.afro-hair {
+    width: 100px;
+    height: 100px;
+    background: #1a0f0a;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    animation: hairGlow 4s infinite alternate;
+}
+
+.woman-face {
+    width: 40px;
+    height: 60px;
+    background: #92400e;
+    border-radius: 20px 20px 30px 30px;
+    position: absolute;
+    bottom: 5px;
+    left: 40px;
+}
+
+.gold-comb {
+    width: 35px;
+    height: 8px;
+    background: linear-gradient(to right, #fbbf24, #d97706);
+    position: absolute;
+    top: 15px;
+    right: -10px;
+    border-radius: 2px;
+    animation: combingAction 5s infinite ease-in-out;
+}
+
+@keyframes hairGlow {
+    from {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    }
+
+    to {
+        transform: scale(1.04);
+        box-shadow: 0 0 30px rgba(217, 119, 6, 0.4);
+    }
+}
+
+@keyframes combingAction {
+    0% {
+        transform: translate(0, 0) rotate(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    25% {
+        transform: translate(-70px, 15px) rotate(-25deg);
+    }
+
+    50% {
+        transform: translate(-30px, 50px) rotate(15deg);
+    }
+
+    75% {
+        transform: translate(-80px, 30px) rotate(-15deg);
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0);
+        opacity: 0;
+    }
+}
+
+/* 3. Hashtag Impact - Eco House */
+.anim-hashtag-impact {
+    background: linear-gradient(135deg, #064e3b, #065f46);
+}
+
+.house-structure {
+    width: 120px;
+    height: 100px;
+    position: relative;
+}
+
+.house-roof {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 40px solid #10b981;
+    position: absolute;
+    top: 0;
+}
+
+.house-body {
+    width: 80px;
+    height: 60px;
+    background: #f0fdf4;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+}
+
+.eco-leaf {
+    width: 24px;
+    height: 24px;
+    background: #059669;
+    border-radius: 0 12px;
+    animation: leafSway 4s infinite alternate ease-in-out;
+}
+
+.impact-circle {
+    position: absolute;
+    inset: -30px;
+    border: 3px solid #34d399;
+    border-radius: 50%;
+    opacity: 0;
+    animation: ringPulse 3s infinite ease-out;
+}
+
+@keyframes leafSway {
+    from {
+        transform: scale(0.9) rotate(-15deg);
+    }
+
+    to {
+        transform: scale(1.1) rotate(15deg);
+    }
+}
+
+@keyframes ringPulse {
+    0% {
+        transform: scale(0.4);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
 }

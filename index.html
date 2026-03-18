@@ -18,6 +18,7 @@
             <nav class="nav-links">
                 <a href="agence.html">L'agence</a>
                 <a href="expertise.html">Expertise</a>
+                <a href="solutions.html">Nos Solutions</a>
                 <a href="realisations.html">Réalisations</a>
                 <a href="#contact" class="btn btn-primary">Nous contacter</a>
             </nav>
@@ -121,7 +122,104 @@
         <section id="portfolio" class="section">
             <div class="container">
                 <div class="section-header reveal">
-                    <h2>Nos dernières réalisations</h2>
+                    <h2>Nos Solutions</h2>
+                    <p>Des logiciels que nous publions et maintenons, utilisés en production.</p>
+                </div>
+
+                <div class="portfolio-grid" style="grid-template-columns: repeat(2,1fr);">
+                    <!-- Promethee Selenium — terminal animation -->
+                    <div class="portfolio-item reveal"
+                        style="background:#0d1117; aspect-ratio:16/10; border-radius:var(--border-radius); overflow:hidden; position:relative;">
+                        <div class="sol-anim sol-anim-promethee">
+                            <div class="sol-win-bar">
+                                <span class="sol-dot" style="background:#ff5f57;"></span>
+                                <span class="sol-dot" style="background:#febc2e;"></span>
+                                <span class="sol-dot" style="background:#28c840;"></span>
+                                <span
+                                    style="margin-left:.75rem; font-size:.7rem; color:#6e7681;">promethee_test.py</span>
+                            </div>
+                            <div class="sol-terminal">
+                                <div class="sol-line" style="--d:0s"><span class="sol-kw">from</span> <span
+                                        class="sol-cls">promethee</span> <span class="sol-kw">import</span> Page</div>
+                                <div class="sol-line" style="--d:.4s">page = Page(driver)</div>
+                                <div class="sol-line" style="--d:.8s">page.<span class="sol-fn">navigate</span>(<span
+                                        class="sol-str">"https://app.client.fr"</span>)</div>
+                                <div class="sol-line" style="--d:1.2s">page.<span class="sol-fn">click</span>(<span
+                                        class="sol-str">"#login-btn"</span>)</div>
+                                <div class="sol-line" style="--d:1.6s">page.<span class="sol-fn">fill</span>(<span
+                                        class="sol-str">"#email"</span>, <span class="sol-str">"user@test.fr"</span>)
+                                </div>
+                                <div class="sol-line" style="--d:2s">page.<span class="sol-fn">submit</span>(<span
+                                        class="sol-str">"#form"</span>)</div>
+                                <div class="sol-line" style="--d:2.4s">page.<span class="sol-fn">wait_for</span>(<span
+                                        class="sol-str">".dashboard"</span>)</div>
+                                <div class="sol-line sol-ok" style="--d:3s">✓ <span style="color:#4ade80;">3 tests
+                                        passed</span> <span style="color:#6e7681;">in 2.14s</span></div>
+                                <div class="sol-cursor" style="animation-delay:3.4s;"></div>
+                            </div>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <h3>Promethee Selenium</h3>
+                            <p>Framework Python de haut niveau pour l'automatisation de tests UI robustes et
+                                maintenables.</p>
+                            <a href="solutions-promethee-selenium.html" class="btn btn-accent"
+                                style="margin-top: 1rem;">Découvrir l'outil</a>
+                        </div>
+                    </div>
+
+                    <!-- Selenium UI Test Tool — API call animation -->
+                    <div class="portfolio-item reveal"
+                        style="background:#161b22; aspect-ratio:16/10; border-radius:var(--border-radius); overflow:hidden; position:relative;">
+                        <div class="sol-anim sol-anim-selenium">
+                            <div class="sol-win-bar">
+                                <span class="sol-dot" style="background:#ff5f57;"></span>
+                                <span class="sol-dot" style="background:#febc2e;"></span>
+                                <span class="sol-dot" style="background:#28c840;"></span>
+                                <span
+                                    style="margin-left:.75rem; font-size:.7rem; color:#6e7681;">selenium_ui_demo.py</span>
+                            </div>
+                            <div class="sol-terminal">
+                                <div class="sol-line" style="--d:0s"><span class="sol-kw">from</span> <span
+                                        class="sol-cls">selenium_ui</span> <span class="sol-kw">import</span> UIHelper
+                                </div>
+                                <div class="sol-line" style="--d:.5s">ui = UIHelper(driver)</div>
+                                <div class="sol-line sol-sep" style="--d:.9s; color:#3b82f6;">─── Interaction DOM
+                                    ───────────────</div>
+                                <div class="sol-line" style="--d:1.3s">ui.<span class="sol-fn">fill</span>(<span
+                                        class="sol-str">"#search"</span>, <span class="sol-str">"Marne Tech"</span>)
+                                </div>
+                                <div class="sol-line" style="--d:1.7s">ui.<span class="sol-fn">click</span>(<span
+                                        class="sol-str">"button[type=submit]"</span>)</div>
+                                <div class="sol-line" style="--d:2.1s">ui.<span class="sol-fn">wait_for</span>(<span
+                                        class="sol-str">".results"</span>)</div>
+                                <div class="sol-line sol-sep" style="--d:2.5s; color:#3b82f6;">─── Résultat
+                                    ──────────────────────</div>
+                                <div class="sol-line sol-ok" style="--d:3s">✓ <span style="color:#4ade80;">Élément
+                                        trouvé</span> <span style="color:#6e7681;">(3 résultats)</span></div>
+                                <div class="sol-cursor" style="animation-delay:3.5s;"></div>
+                            </div>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <h3>Selenium UI Test Tool</h3>
+                            <p>Bibliothèque d'abstraction Selenium UI — une API de haut niveau pour simplifier vos tests
+                                web.</p>
+                            <a href="solutions-selenium-ui-test-tool.html" class="btn btn-accent"
+                                style="margin-top: 1rem;">Découvrir l'outil</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div style="text-align: center; margin-top: 2.5rem;">
+                    <a href="solutions.html" class="btn btn-primary">Voir toutes nos solutions</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background-color: var(--bg-light);">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Nos Réalisations</h2>
                     <p>Découvrez comment nous aidons nos clients à atteindre leurs objectifs grâce au digital.</p>
                 </div>
 
@@ -155,16 +253,10 @@
                                 style="margin-top: 1rem;">Voir le projet</a>
                         </div>
                     </div>
+                </div>
 
-                    <div class="portfolio-item reveal">
-                        <img src="assets/images/project-promethee.png" alt="Promethee Selenium">
-                        <div class="portfolio-overlay">
-                            <h3>Promethee Selenium</h3>
-                            <p>Librairie Python avancée pour l'automatisation de tests UI.</p>
-                            <a href="realisation-promethee.html" class="btn btn-accent" style="margin-top: 1rem;">Voir
-                                le projet</a>
-                        </div>
-                    </div>
+                <div style="text-align: center; margin-top: 2.5rem;">
+                    <a href="realisations.html" class="btn btn-primary">Voir toutes nos réalisations</a>
                 </div>
             </div>
         </section>
@@ -194,7 +286,7 @@
                     <li><a href="expertise.html">Automatisation</a></li>
                     <li><a href="expertise.html">Développement Web</a></li>
                     <li><a href="expertise.html">Applications Mobiles</a></li>
-                    <li><a href="expertise.html">Cloud & DevOps</a></li>
+                    <li><a href="expertise.html">Cloud &amp; DevOps</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -217,7 +309,7 @@
             </div>
         </div>
         <div class="container footer-bottom">
-            <p>&copy; 2026 Marne Tech. Tous droits réservés.</p>
+            <p>© 2026 Marne Tech. Tous droits réservés.</p>
         </div>
     </footer>
 

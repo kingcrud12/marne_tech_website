@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Solutions | Marne Tech - Logiciels & Bibliothèques Open Source</title>
+    <meta name="description"
+        content="Découvrez les solutions logicielles publiées par Marne Tech : Promethee Selenium et Selenium UI Test Tool.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .inner-hero {
+            padding: 160px 5% 100px;
+            background: var(--primary-dark);
+            color: var(--white);
+            text-align: center;
+        }
+
+        /* Solution cards — horizontal layout */
+        .solutions-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            padding: 4rem 0;
+        }
+
+        .solution-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.07);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .solution-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .solution-card.reverse {
+            direction: rtl;
+        }
+
+        .solution-card.reverse > * {
+            direction: ltr;
+        }
+
+        .solution-preview {
+            position: relative;
+            height: 380px;
+            overflow: hidden;
+        }
+
+        .solution-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.6s ease;
+        }
+
+        .solution-card:hover .solution-preview img {
+            transform: scale(1.04);
+        }
+
+        .solution-preview .badge {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            background: var(--accent);
+            color: var(--text-main);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 0.35rem 0.9rem;
+            border-radius: 50px;
+        }
+
+        .solution-info {
+            padding: 3rem;
+        }
+
+        .solution-info .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            background: rgba(41, 107, 126, 0.08);
+            padding: 0.3rem 0.9rem;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+        }
+
+        .solution-info h2 {
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .solution-info p {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .solution-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .solution-stack span {
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: var(--bg-light);
+            color: var(--text-muted);
+            padding: 0.3rem 0.75rem;
+            border-radius: 50px;
+        }
+
+        .solution-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.75rem;
+            border-radius: 50px;
+            font-weight: 600;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        @media (max-width: 900px) {
+            .solution-card,
+            .solution-card.reverse {
+                grid-template-columns: 1fr;
+                direction: ltr;
+            }
+
+            .solution-preview {
+                height: 260px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">MARNE<span>TECH</span></a>
+            <nav class="nav-links">
+                <a href="agence.html">L'agence</a>
+                <a href="expertise.html">Expertise</a>
+                <a href="solutions.html" style="color: var(--primary);">Nos Solutions</a>
+                <a href="realisations.html">Réalisations</a>
+                <a href="index.html#contact" class="btn btn-primary">Nous contacter</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="inner-hero">
+            <div class="container">
+                <h1 class="reveal">Nos Solutions</h1>
+                <p class="reveal" style="color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto;">
+                    Nous publions des logiciels et bibliothèques open source que nous utilisons nous-mêmes en production.
+                    Des outils concrets, documentés et maintenus.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="solutions-list">
+
+                    <!-- Promethee Selenium -->
+                    <div class="solution-card reveal">
+                        <div class="solution-preview">
+                            <img src="assets/images/project-promethee.png" alt="Promethee Selenium">
+                            <span class="badge">Open Source</span>
+                        </div>
+                        <div class="solution-info">
+                            <span class="tag"><i data-lucide="package" style="width:14px;height:14px;"></i> Bibliothèque Python</span>
+                            <h2>Promethee Selenium</h2>
+                            <p>Un framework Python de haut niveau conçu pour abstraire la complexité de Selenium WebDriver. Simplifiez la manipulation du DOM, les attentes explicites et l'interaction avec les formulaires grâce à des utilitaires prêts à l'emploi.</p>
+                            <p>Idéal pour les équipes QA qui souhaitent écrire des tests robustes et maintenables sans se noyer dans le code bas niveau de Selenium.</p>
+                            <div class="solution-stack">
+                                <span>Python</span>
+                                <span>Selenium WebDriver</span>
+                                <span>WebDriverWait</span>
+                                <span>Page Object Model</span>
+                            </div>
+                            <div class="solution-actions">
+                                <a href="solutions-promethee-selenium.html" class="btn btn-primary">Découvrir l'outil</a>
+                                <a href="https://github.com/kingcrud12" target="_blank" class="btn-outline">
+                                    <i data-lucide="github" style="width:16px;height:16px;"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Selenium UI Test Tool -->
+                    <div class="solution-card reverse reveal">
+                        <div class="solution-preview" style="background: #0d1117; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1rem; padding: 2rem;">
+                            <div style="font-size: 1.1rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.6rem;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                                Selenium UI Test Tool
+                            </div>
+                            <div style="background: #161b22; border-radius: 8px; padding: 1.25rem 1.5rem; width: 100%; font-family: monospace; font-size: 0.78rem; color: #8b949e; border: 1px solid #30363d;">
+                                <div style="color:#6e7681; margin-bottom:0.5rem;"># exemple_natif.py</div>
+                                <div><span style="color:#ff7b72;">from</span> <span style="color:#79c0ff;">selenium_ui</span> <span style="color:#ff7b72;">import</span> UIHelper</div>
+                                <div style="margin-top:0.5rem; color:#8b949e;">ui = UIHelper(driver)</div>
+                                <div style="color:#8b949e;">ui.<span style="color:#d2a8ff;">fill_form</span>(<span style="color:#a5d6ff;">"#search"</span>, <span style="color:#a5d6ff;">"Marne Tech"</span>)</div>
+                                <div style="color:#8b949e;">ui.<span style="color:#d2a8ff;">click</span>(<span style="color:#a5d6ff;">"button[type=submit]"</span>)</div>
+                                <div style="color:#8b949e;">ui.<span style="color:#d2a8ff;">wait_for</span>(<span style="color:#a5d6ff;">".results"</span>)</div>
+                            </div>
+                            <a href="https://kingcrud12.github.io/selenium_ui_test_tool/" target="_blank"
+                                style="font-size:0.8rem; color:#3b82f6; text-decoration:underline;">kingcrud12.github.io/selenium_ui_test_tool</a>
+                            <span class="badge" style="position:relative; top:auto; left:auto;">Open Source</span>
+                        </div>
+                        <div class="solution-info">
+                            <span class="tag"><i data-lucide="package" style="width:14px;height:14px;"></i> Bibliothèque Python</span>
+                            <h2>Selenium UI Test Tool</h2>
+                            <p>Une API de haut niveau conçue pour abstraire la complexité de Selenium WebDriver. Simplifiez la manipulation du DOM, les attentes explicites et l'interaction avec les formulaires grâce à des utilitaires prêts à l'emploi.</p>
+                            <p>Disponible avec une documentation complète, des exemples concrets et une interface multilingue (FR/EN).</p>
+                            <div class="solution-stack">
+                                <span>Python</span>
+                                <span>Selenium</span>
+                                <span>Playwright</span>
+                                <span>pip install</span>
+                            </div>
+                            <div class="solution-actions">
+                                <a href="solutions-selenium-ui-test-tool.html" class="btn btn-primary">Découvrir l'outil</a>
+                                <a href="https://github.com/kingcrud12/selenium_ui_test_tool" target="_blank" class="btn-outline">
+                                    <i data-lucide="github" style="width:16px;height:16px;"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background-color: var(--primary); color: var(--white); text-align: center;">
+            <div class="container reveal">
+                <h2>Vous avez un projet logiciel ?</h2>
+                <p style="margin-bottom: 2rem; color: rgba(255,255,255,0.8);">Parlons-en. Nous accompagnons les équipes à concevoir, développer et publier leurs propres outils.</p>
+                <a href="index.html#contact" class="btn btn-accent">Démarrer une collaboration</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo" style="color: var(--white);">MARNE<span>TECH</span></a>
+                <p>Votre partenaire technologique de proximité pour des solutions digitales innovantes et durables.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Expertises</h4>
+                <ul class="footer-links">
+                    <li><a href="expertise.html">Automatisation</a></li>
+                    <li><a href="expertise.html">Développement Web</a></li>
+                    <li><a href="expertise.html">Applications Mobiles</a></li>
+                    <li><a href="expertise.html">Cloud &amp; DevOps</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>L'agence</h4>
+                <ul class="footer-links">
+                    <li><a href="agence.html">À propos</a></li>
+                    <li><a href="solutions.html">Nos Solutions</a></li>
+                    <li><a href="realisations.html">Réalisations</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Marne Tech. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
