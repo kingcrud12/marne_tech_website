@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatisation | Marne Tech - Solutions sur mesure</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .inner-hero {
+            padding: 160px 5% 100px;
+            background: var(--primary-dark);
+            color: var(--white);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">MARNE<span>TECH</span></a>
+            <nav class="nav-links">
+                <a href="agence.html">L'agence</a>
+                <a href="expertise.html" style="color: var(--primary);">Expertise</a>
+                <a href="solutions.html">Nos Solutions</a>
+                <a href="realisations.html">Réalisations</a>
+                <a href="index.html#contact" class="btn btn-primary">Nous contacter</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="inner-hero">
+            <div class="container">
+                <h1 class="reveal">Automatisation</h1>
+                <p class="reveal" style="color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto;">Libérez votre équipe des tâches répétitives grâce à des workflows intelligents et des robots sur mesure.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Gagnez en efficacité opérationnelle</h2>
+                    <p>Nous concevons des solutions d'automatisation qui s'intègrent parfaitement à vos outils existants pour supprimer les goulots d'étranglement.</p>
+                </div>
+
+                <div class="services-grid services-grid-3">
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i data-lucide="bot"></i></div>
+                        <h3>RPA & scripts sur mesure</h3>
+                        <p>Automatisation de processus robotisés pour les tâches administratives et de saisie de données.</p>
+                    </div>
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i data-lucide="zap"></i></div>
+                        <h3>Intégrations API & webhooks</h3>
+                        <p>Faites communiquer vos logiciels entre eux pour un flux d'information fluide et sans erreur humaine.</p>
+                    </div>
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i data-lucide="check-circle"></i></div>
+                        <h3>Tests automatisés</h3>
+                        <p>Sécurisez vos déploiements avec des suites de tests robustes (Selenium, Playwright) garantissant la qualité logicielle.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section bg-light" style="background-color: var(--bg-light);">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Pourquoi automatiser ?</h2>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <p class="reveal" style="margin-bottom: 2rem;">L'automatisation n'est pas seulement une question de gain de temps. C'est un levier stratégique pour réduire les erreurs, améliorer la satisfaction de vos collaborateurs en les libérant des tâches ingrates, et augmenter votre capacité de traitement sans augmenter vos coûts fixes.</p>
+                    <div class="service-card reveal" style="padding: 2rem; border-left: 4px solid var(--primary);">
+                        <p><strong>"L'automatisation a permis à nos clients de réduire leur temps de traitement administratif de plus de 60% en moyenne."</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo" style="color: var(--white);">MARNE<span>TECH</span></a>
+                <p>Votre partenaire technologique de proximité pour des solutions digitales innovantes et durables.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Expertises</h4>
+                <ul class="footer-links">
+                    <li><a href="automatisation.html">Automatisation</a></li>
+                    <li><a href="developpement-web.html">Développement Web</a></li>
+                    <li><a href="applications-mobiles.html">Applications Mobiles</a></li>
+                    <li><a href="cloud-devops.html">Cloud &amp; DevOps</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>L'agence</h4>
+                <ul class="footer-links">
+                    <li><a href="agence.html">À propos</a></li>
+                    <li><a href="realisations.html">Portfolio</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Marne Tech. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

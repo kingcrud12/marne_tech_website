@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Développement Web | Marne Tech - Applications & SaaS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .inner-hero {
+            padding: 160px 5% 100px;
+            background: var(--primary-dark);
+            color: var(--white);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">MARNE<span>TECH</span></a>
+            <nav class="nav-links">
+                <a href="agence.html">L'agence</a>
+                <a href="expertise.html" style="color: var(--primary);">Expertise</a>
+                <a href="solutions.html">Nos Solutions</a>
+                <a href="realisations.html">Réalisations</a>
+                <a href="index.html#contact" class="btn btn-primary">Nous contacter</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="inner-hero">
+            <div class="container">
+                <h1 class="reveal">Développement Web</h1>
+                <p class="reveal" style="color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto;">Applications web et logiciels SaaS conçus pour performer à grande échelle et offrir une expérience utilisateur irréprochable.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Des technologies modernes pour des projets ambitieux</h2>
+                    <p>Nous maîtrisons les frameworks les plus performants pour construire des applications scalables, rapides et sécurisées.</p>
+                </div>
+
+                <div class="services-grid services-grid-3">
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i data-lucide="layout"></i></div>
+                        <h3>Architecture performante</h3>
+                        <p>Conception de structures logicielles robustes permettant une évolution constante sans compromis sur la vitesse.</p>
+                    </div>
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i data-lucide="database"></i></div>
+                        <h3>SaaS & plateformes métiers</h3>
+                        <p>Développement de solutions complexes pour digitaliser vos processus métier ou lancer votre propre produit logiciel.</p>
+                    </div>
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i data-lucide="search"></i></div>
+                        <h3>SEO technique optimisé</h3>
+                        <p>Des performances de chargement et une structure de code pensées pour un référencement naturel optimal dès le premier jour.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section bg-light" style="background-color: var(--bg-light);">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Notre approche Web</h2>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <p class="reveal" style="margin-bottom: 2rem;">Nous ne nous contentons pas de coder. Nous vous accompagnons dans le choix de la stack technologique la plus adaptée à vos enjeux de croissance. Que ce soit pour un MVP ou une migration de plateforme, notre priorité reste la performance et la facilité de maintenance à long terme.</p>
+                    <div class="service-card reveal" style="padding: 2rem; border-left: 4px solid var(--primary);">
+                        <p><strong>Stack de prédilection : React, Next.js, Node.js, et architectures Headless pour une flexibilité maximale.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo" style="color: var(--white);">MARNE<span>TECH</span></a>
+                <p>Votre partenaire technologique de proximité pour des solutions digitales innovantes et durables.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Expertises</h4>
+                <ul class="footer-links">
+                    <li><a href="automatisation.html">Automatisation</a></li>
+                    <li><a href="developpement-web.html">Développement Web</a></li>
+                    <li><a href="applications-mobiles.html">Applications Mobiles</a></li>
+                    <li><a href="cloud-devops.html">Cloud &amp; DevOps</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>L'agence</h4>
+                <ul class="footer-links">
+                    <li><a href="agence.html">À propos</a></li>
+                    <li><a href="realisations.html">Portfolio</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Marne Tech. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
