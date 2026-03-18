@@ -304,6 +304,10 @@ header.scrolled .menu-toggle {
     gap: 2rem;
 }
 
+.services-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
 .service-card {
     background: var(--white);
     padding: 3rem;
@@ -521,6 +525,10 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
 
+    .services-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -582,6 +590,10 @@ footer {
     .about-grid {
         grid-template-columns: 1fr !important;
         gap: 2rem !important;
+    }
+
+    .services-grid-4 {
+        grid-template-columns: 1fr;
     }
 }
 
