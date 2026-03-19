@@ -279,12 +279,12 @@ header.scrolled .menu-toggle {
 .stat-item {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
-	text-align: left;
+	align-items: center;
+	text-align: center;
 }
 
 .stat-item h2 {
-    font-size: 5rem;
+    font-size: 4rem;
     margin-bottom: 0.5rem;
     -webkit-text-stroke: 1px var(--white);
     color: transparent;
@@ -929,7 +929,7 @@ footer {
     }
 
     .stat-item h2 {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
     }
 }
 
