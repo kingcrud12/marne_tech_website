@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malea | Marne Tech - Réalisation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-hero {
+            padding: 180px 5% 100px;
+            background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.4)), url('assets/images/project-malea.png') center/cover;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .project-info-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            padding: 5rem 0;
+        }
+
+        .project-meta {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            height: fit-content;
+        }
+
+        .project-meta h4 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .project-meta ul {
+            list-style: none;
+        }
+
+        .project-meta li {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        .project-content h2 {
+            margin-bottom: 2rem;
+            color: var(--text-main);
+        }
+
+        .project-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--text-main);
+        }
+
+        .store-badges {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .store-badge {
+            height: 40px;
+        }
+
+        @media (max-width: 992px) {
+            .project-info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">MARNE<span>TECH</span></a>
+            <nav class="nav-links">
+                <a href="agence.html">L'agence</a>
+                <a href="expertise.html">Expertise</a>
+                <a href="realisations.html" style="color: var(--primary);">Réalisations</a>
+                <a href="index.html#contact" class="btn btn-primary">Nous contacter</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="project-hero">
+            <div class="container">
+                <p style="color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">
+                    Application Mobile Lifestyle</p>
+                <h1 style="font-size: 3.5rem; margin-top: 1rem;">Malea</h1>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="project-info-grid">
+                    <div class="project-content">
+                        <h2 class="reveal">Le Projet</h2>
+                        <p class="reveal">Maléa est une application mobile innovante conçue pour redécouvrir la ville sous un nouvel angle. L'objectif était de créer une plateforme sociale et utilitaire permettant aux utilisateurs d'identifier les pépites locales, de partager des lieux insolites et de renforcer le lien avec les commerces de proximité.</p>
+
+                        <h2 class="reveal" style="margin-top: 4rem;">Notre Solution</h2>
+                        <p class="reveal">Nous avons développé une application mobile performante (iOS et Android) offrant une expérience utilisateur fluide et immersive :
+                            <br><br>
+                            1. <strong>Carte Interactive Personnalisée</strong> : Visualisation des commerces et spots insolites avec des filtres intelligents.
+                            <br>
+                            2. <strong>Communauté & Partage</strong> : Possibilité de recommander des lieux et de consulter les avis de la communauté Maléa.
+                            <br>
+                            3. <strong>Fidélité & Services</strong> : Outils de mise en relation directe avec les commerçants locaux.
+                        </p>
+
+                        <div style="margin-top: 4rem;">
+                            <h2 class="reveal">Télécharger l'application</h2>
+                            <div class="store-badges reveal">
+                                <a href="https://apps.apple.com/us/app/malea/id6761765215" target="_blank">
+                                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/fr-fr?size=250x83&amp;releaseDate=1626220800&h=843e9334ccfb23896dfa25310651f8a8" alt="Download on the App Store" class="store-badge">
+                                </a>
+                                <a href="https://play.google.com/store/apps/details?id=com.marne_tech.malea_app&hl=fr" target="_blank">
+                                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png" alt="Get it on Google Play" class="store-badge" style="height: 60px; margin-top: -10px;">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="project-meta reveal">
+                        <h4>Expertises</h4>
+                        <ul style="margin-bottom: 2rem;">
+                            <li>Développement Mobile (Flutter)</li>
+                            <li>Architecture Cloud (Firebase)</li>
+                            <li>Intégration Google Maps API</li>
+                            <li>UI/UX Design</li>
+                        </ul>
+
+                        <h4>Client</h4>
+                        <p style="margin-bottom: 2rem;">Marne Tech (Projet Interne)</p>
+
+                        <h4>Site Web</h4>
+                        <a href="https://malea-app.com/" class="btn btn-primary"
+                            style="width: 100%; text-align: center;" target="_blank">Visiter le site</a>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--bg-light); text-align: center;">
+            <div class="container reveal">
+                <h2>Projet Suivant</h2>
+                <div style="margin-top: 2rem;">
+                    <a href="realisation-easy-task.html" class="btn btn-accent">Easy Task</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo" style="color: var(--white);">MARNE<span>TECH</span></a>
+                <p>Votre partenaire technologique de proximité pour des solutions digitales innovantes et durables.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Expertises</h4>
+                <ul class="footer-links">
+                    <li><a href="automatisation.html">Automatisation</a></li>
+                    <li><a href="developpement-web.html">Développement Web</a></li>
+                    <li><a href="applications-mobiles.html">Applications Mobiles</a></li>
+                    <li><a href="cloud-devops.html">Cloud &amp; DevOps</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>L'agence</h4>
+                <ul class="footer-links">
+                    <li><a href="agence.html">À propos</a></li>
+                    <li><a href="realisations.html">Réalisations</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Marne Tech. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
